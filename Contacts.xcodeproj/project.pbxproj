@@ -10,6 +10,7 @@
 		0EE3BD9D29ADBF02003792D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE3BD9C29ADBF02003792D4 /* AppDelegate.swift */; };
 		0EE3BD9F29ADBF03003792D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EE3BD9E29ADBF03003792D4 /* Assets.xcassets */; };
 		0EE3BDA229ADBF03003792D4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE3BDA029ADBF03003792D4 /* MainMenu.xib */; };
+		0EE3BDAC29ADBF1F003792D4 /* contacts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EE3BDAA29ADBF1F003792D4 /* contacts.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -18,6 +19,9 @@
 		0EE3BD9E29ADBF03003792D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EE3BDA129ADBF03003792D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0EE3BDA329ADBF03003792D4 /* CppBridgeTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CppBridgeTest.entitlements; sourceTree = "<group>"; };
+		0EE3BDA929ADBF1F003792D4 /* CppBridgeTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CppBridgeTest-Bridging-Header.h"; sourceTree = "<group>"; };
+		0EE3BDAA29ADBF1F003792D4 /* contacts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = contacts.cpp; sourceTree = "<group>"; };
+		0EE3BDAB29ADBF1F003792D4 /* contacts.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = contacts.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -34,8 +38,11 @@
 		0EE3BD9029ADBF02003792D4 = {
 			isa = PBXGroup;
 			children = (
+				0EE3BDAA29ADBF1F003792D4 /* contacts.cpp */,
+				0EE3BDAB29ADBF1F003792D4 /* contacts.hpp */,
 				0EE3BD9B29ADBF02003792D4 /* CppBridgeTest */,
 				0EE3BD9A29ADBF02003792D4 /* Products */,
+				0EE3BDA929ADBF1F003792D4 /* CppBridgeTest-Bridging-Header.h */,
 			);
 			sourceTree = "<group>";
 		};
@@ -90,6 +97,7 @@
 				TargetAttributes = {
 					0EE3BD9829ADBF02003792D4 = {
 						CreatedOnToolsVersion = 14.2;
+						LastSwiftMigration = 1420;
 					};
 				};
 			};
@@ -129,6 +137,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EE3BD9D29ADBF02003792D4 /* AppDelegate.swift in Sources */,
+				0EE3BDAC29ADBF1F003792D4 /* contacts.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,6 +273,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CppBridgeTest/CppBridgeTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -282,6 +292,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.teaeles.CppBridgeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CppBridgeTest-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -291,6 +303,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = CppBridgeTest/CppBridgeTest.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -309,6 +322,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.teaeles.CppBridgeTest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "CppBridgeTest-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
