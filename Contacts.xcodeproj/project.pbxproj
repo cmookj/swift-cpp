@@ -11,10 +11,11 @@
 		0EE3BD9F29ADBF03003792D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EE3BD9E29ADBF03003792D4 /* Assets.xcassets */; };
 		0EE3BDA229ADBF03003792D4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE3BDA029ADBF03003792D4 /* MainMenu.xib */; };
 		0EE3BDAC29ADBF1F003792D4 /* contacts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EE3BDAA29ADBF1F003792D4 /* contacts.cpp */; };
+		0EE3BDB129AE133D003792D4 /* c_interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EE3BDB029AE133D003792D4 /* c_interface.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0EE3BD9929ADBF02003792D4 /* CppBridgeTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CppBridgeTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		0EE3BD9929ADBF02003792D4 /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE3BD9C29ADBF02003792D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EE3BD9E29ADBF03003792D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EE3BDA129ADBF03003792D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
@@ -22,6 +23,8 @@
 		0EE3BDA929ADBF1F003792D4 /* CppBridgeTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CppBridgeTest-Bridging-Header.h"; sourceTree = "<group>"; };
 		0EE3BDAA29ADBF1F003792D4 /* contacts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = contacts.cpp; sourceTree = "<group>"; };
 		0EE3BDAB29ADBF1F003792D4 /* contacts.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = contacts.hpp; sourceTree = "<group>"; };
+		0EE3BDAF29AE133D003792D4 /* c_interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c_interface.h; sourceTree = "<group>"; };
+		0EE3BDB029AE133D003792D4 /* c_interface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = c_interface.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +41,8 @@
 		0EE3BD9029ADBF02003792D4 = {
 			isa = PBXGroup;
 			children = (
+				0EE3BDAF29AE133D003792D4 /* c_interface.h */,
+				0EE3BDB029AE133D003792D4 /* c_interface.cpp */,
 				0EE3BDAA29ADBF1F003792D4 /* contacts.cpp */,
 				0EE3BDAB29ADBF1F003792D4 /* contacts.hpp */,
 				0EE3BD9B29ADBF02003792D4 /* CppBridgeTest */,
@@ -49,7 +54,7 @@
 		0EE3BD9A29ADBF02003792D4 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0EE3BD9929ADBF02003792D4 /* CppBridgeTest.app */,
+				0EE3BD9929ADBF02003792D4 /* Contacts.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,9 +73,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0EE3BD9829ADBF02003792D4 /* CppBridgeTest */ = {
+		0EE3BD9829ADBF02003792D4 /* Contacts */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0EE3BDA629ADBF03003792D4 /* Build configuration list for PBXNativeTarget "CppBridgeTest" */;
+			buildConfigurationList = 0EE3BDA629ADBF03003792D4 /* Build configuration list for PBXNativeTarget "Contacts" */;
 			buildPhases = (
 				0EE3BD9529ADBF02003792D4 /* Sources */,
 				0EE3BD9629ADBF02003792D4 /* Frameworks */,
@@ -80,9 +85,9 @@
 			);
 			dependencies = (
 			);
-			name = CppBridgeTest;
+			name = Contacts;
 			productName = CppBridgeTest;
-			productReference = 0EE3BD9929ADBF02003792D4 /* CppBridgeTest.app */;
+			productReference = 0EE3BD9929ADBF02003792D4 /* Contacts.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -101,7 +106,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0EE3BD9429ADBF02003792D4 /* Build configuration list for PBXProject "CppBridgeTest" */;
+			buildConfigurationList = 0EE3BD9429ADBF02003792D4 /* Build configuration list for PBXProject "Contacts" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -114,7 +119,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0EE3BD9829ADBF02003792D4 /* CppBridgeTest */,
+				0EE3BD9829ADBF02003792D4 /* Contacts */,
 			);
 		};
 /* End PBXProject section */
@@ -138,6 +143,7 @@
 			files = (
 				0EE3BD9D29ADBF02003792D4 /* AppDelegate.swift in Sources */,
 				0EE3BDAC29ADBF1F003792D4 /* contacts.cpp in Sources */,
+				0EE3BDB129AE133D003792D4 /* c_interface.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -330,7 +336,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0EE3BD9429ADBF02003792D4 /* Build configuration list for PBXProject "CppBridgeTest" */ = {
+		0EE3BD9429ADBF02003792D4 /* Build configuration list for PBXProject "Contacts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EE3BDA429ADBF03003792D4 /* Debug */,
@@ -339,7 +345,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0EE3BDA629ADBF03003792D4 /* Build configuration list for PBXNativeTarget "CppBridgeTest" */ = {
+		0EE3BDA629ADBF03003792D4 /* Build configuration list for PBXNativeTarget "Contacts" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0EE3BDA729ADBF03003792D4 /* Debug */,

@@ -1,37 +1,75 @@
 //
-//  CppEngine.cpp
+//  contacts.cpp
 //  CppBridgeTest
 //
 //  Created by Changmook Chun on 2023-02-27.
 //
 
-#include "CppEngine.hpp"
+#include "contacts.hpp"
 
 #include <exception>
+#include <iostream>
 
-integer_buffer::integer_buffer (std::size_t sz, const std::string& name) {
-    _buffer = std::vector<int>(sz, 0);
-    _name = name;
+contact::contact(const std::string& name,
+                 const std::string& address,
+                 const uint64_t phone_number
+                 )
+: _name {name}
+, _address {address}
+, _phone_number {phone_number}
+{
+    std::cout << "New contact"
+    << "\n\tName: " << _name
+    << "\n\tAddress: " << _address
+    << "\n\tPhone number: " << _phone_number
+    << std::endl;
 }
 
-std::string integer_buffer::name() const {
+const std::string& contact::name() const {
     return _name;
 }
 
-std::size_t integer_buffer::size() const {
-    return _buffer.size();
+const std::string& contact::address() const {
+    return _address;
 }
 
-int integer_buffer::at(const std::size_t i) const {
-    if (0 <= i && i < _buffer.size())
-        return _buffer[i];
+uint64_t contact::phone_number() const {
+    return _phone_number;
+}
+
+void contact::set_name(const std::string& n) {
+    _name = n;
+    std::cout << "Name: " << _name << std::endl;
+}
+
+void contact::set_address(const std::string& a) {
+    _address = a;
+    std::cout << "Address: " << _address << std::endl;
+}
+
+void contact::set_phone_number(const uint64_t n) {
+    _phone_number = n;
+    std::cout << "Phone number: " << _phone_number << std::endl;
+}
+
+std::size_t contacts::size() const {
+    return _people.size();
+}
+
+contact& contacts::operator[](const std::size_t idx) {
+    return const_cast<contact&>(static_cast<const contacts&>(*this)[idx]);
+}
+
+const contact& contacts::operator[](const std::size_t idx) const {
+    if (0 <= idx && idx < _people.size())
+        return _people[idx];
     else
         throw std::runtime_error("Out of range");
 }
 
-void integer_buffer::set_value_at(const std::size_t i, const int& val) {
-    if (0 <= i && i < _buffer.size())
-        _buffer[i] = val;
-    else
-        throw std::runtime_error("Out of range");
+void contacts::new_contact(const std::string& name,
+                           const std::string& address,
+                           const uint64_t phone_number
+                           ) {
+    _people.push_back(contact{name, address, phone_number});
 }

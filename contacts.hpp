@@ -1,31 +1,46 @@
 //
-//  CppEngine.hpp
+//  contacts.hpp
 //  CppBridgeTest
 //
 //  Created by Changmook Chun on 2023-02-27.
 //
 
-#ifndef CppEngine_hpp
-#define CppEngine_hpp
+#ifndef contacts_hpp
+#define contacts_hpp
 
+#include <cstdint>
 #include <string>
 #include <vector>
 
-class integer_buffer {
+class contact {
 public:
-    integer_buffer() = delete;
-    explicit integer_buffer (std::size_t sz, const std::string& name);
-    ~integer_buffer() = default;
+    contact(const std::string&, const std::string&, const uint64_t);
     
-    std::string name() const;
-    std::size_t size() const;
+    const std::string& name() const;
+    const std::string& address() const;
+    uint64_t phone_number() const;
     
-    int at(const std::size_t) const;
-    void set_value_at(const std::size_t, const int&);
+    void set_name(const std::string&);
+    void set_address(const std::string&);
+    void set_phone_number(const uint64_t);
     
 private:
     std::string _name;
-    std::vector<int> _buffer;
+    std::string _address;
+    uint64_t _phone_number;
 };
 
-#endif /* CppEngine_hpp */
+class contacts {
+public:
+    std::size_t size() const;
+    
+    contact& operator[](const std::size_t);
+    const contact& operator[](const std::size_t) const;
+    
+    void new_contact(const std::string&, const std::string&, const uint64_t);
+    
+private:
+    std::vector<contact> _people;
+};
+
+#endif /* contacts_hpp */
