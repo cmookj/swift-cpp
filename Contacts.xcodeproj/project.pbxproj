@@ -7,22 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0ED91A292AD5C06000B925E3 /* libContacts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0ED91A282AD5C06000B925E3 /* libContacts.framework */; };
 		0EE3BD9D29ADBF02003792D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EE3BD9C29ADBF02003792D4 /* AppDelegate.swift */; };
 		0EE3BD9F29ADBF03003792D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EE3BD9E29ADBF03003792D4 /* Assets.xcassets */; };
 		0EE3BDA229ADBF03003792D4 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EE3BDA029ADBF03003792D4 /* MainMenu.xib */; };
-		0EE3BDAC29ADBF1F003792D4 /* contacts.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EE3BDAA29ADBF1F003792D4 /* contacts.cpp */; };
 		0EE3BDB129AE133D003792D4 /* c_interface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0EE3BDB029AE133D003792D4 /* c_interface.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0ED91A282AD5C06000B925E3 /* libContacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = libContacts.framework; path = libContacts/libContacts.framework; sourceTree = "<group>"; };
 		0EE3BD9929ADBF02003792D4 /* Contacts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Contacts.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EE3BD9C29ADBF02003792D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EE3BD9E29ADBF03003792D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EE3BDA129ADBF03003792D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		0EE3BDA329ADBF03003792D4 /* CppBridgeTest.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = CppBridgeTest.entitlements; sourceTree = "<group>"; };
 		0EE3BDA929ADBF1F003792D4 /* CppBridgeTest-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CppBridgeTest-Bridging-Header.h"; sourceTree = "<group>"; };
-		0EE3BDAA29ADBF1F003792D4 /* contacts.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = contacts.cpp; sourceTree = "<group>"; };
-		0EE3BDAB29ADBF1F003792D4 /* contacts.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = contacts.hpp; sourceTree = "<group>"; };
 		0EE3BDAF29AE133D003792D4 /* c_interface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = c_interface.h; sourceTree = "<group>"; };
 		0EE3BDB029AE133D003792D4 /* c_interface.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = c_interface.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -32,22 +31,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0ED91A292AD5C06000B925E3 /* libContacts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0ED91A272AD5C06000B925E3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0ED91A282AD5C06000B925E3 /* libContacts.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		0EE3BD9029ADBF02003792D4 = {
 			isa = PBXGroup;
 			children = (
 				0EE3BDAF29AE133D003792D4 /* c_interface.h */,
 				0EE3BDB029AE133D003792D4 /* c_interface.cpp */,
-				0EE3BDAA29ADBF1F003792D4 /* contacts.cpp */,
-				0EE3BDAB29ADBF1F003792D4 /* contacts.hpp */,
 				0EE3BD9B29ADBF02003792D4 /* CppBridgeTest */,
 				0EE3BD9A29ADBF02003792D4 /* Products */,
 				0EE3BDA929ADBF1F003792D4 /* CppBridgeTest-Bridging-Header.h */,
+				0ED91A272AD5C06000B925E3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -142,7 +149,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EE3BD9D29ADBF02003792D4 /* AppDelegate.swift in Sources */,
-				0EE3BDAC29ADBF1F003792D4 /* contacts.cpp in Sources */,
 				0EE3BDB129AE133D003792D4 /* c_interface.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -286,6 +292,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PJMW65YB82;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libContacts",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
@@ -316,6 +326,10 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = PJMW65YB82;
 				ENABLE_HARDENED_RUNTIME = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/libContacts",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INFOPLIST_KEY_NSMainNibFile = MainMenu;
