@@ -6,7 +6,7 @@
 //
 
 #include "c_interface.h"
-#include "contacts.hpp"
+#include "libContacts/contacts.hpp"
 
 #include <string>
 
